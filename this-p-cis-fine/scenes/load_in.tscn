@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c7qi516l66e7l"]
+
+[ext_resource type="Shader" uid="uid://biwltkxuryfsv" path="res://new_shader.gdshader" id="1_7vrkn"]
+[ext_resource type="Texture2D" uid="uid://dalg12dsgrnma" path="res://assets/sprites/Windows_Screen.png" id="2_fu7sn"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0pqam"]
+shader = ExtResource("1_7vrkn")
+shader_parameter/pixel_size = 5.0
+
+[node name="Node2D" type="Node2D" unique_id=1412888110]
+
+[node name="GameBackdrop" type="Sprite2D" parent="." unique_id=575351870]
+texture_filter = 1
+material = SubResource("ShaderMaterial_0pqam")
+position = Vector2(0, 1)
+texture = ExtResource("2_fu7sn")
