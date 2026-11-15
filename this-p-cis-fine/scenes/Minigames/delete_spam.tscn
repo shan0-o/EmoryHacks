@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://c613eg4u4vx2y"]
+
+[ext_resource type="PackedScene" uid="uid://c7qi516l66e7l" path="res://scenes/backdrop.tscn" id="1_taf04"]
+
+[node name="DeleteSpam" type="Control" unique_id=1513944230]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -10.0
+offset_top = 136.0
+offset_right = -10.0
+offset_bottom = 136.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="backgroud" type="ColorRect" parent="." unique_id=1452591295]
+layout_mode = 0
+offset_right = 1026.0
+offset_bottom = 763.0
+
+[node name="backdrop" parent="." unique_id=1412888110 instance=ExtResource("1_taf04")]
+position = Vector2(523, 388)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2140626217]
+z_index = 5
+layout_mode = 0
+offset_left = 91.0
+offset_top = 98.0
+offset_right = 949.0
+offset_bottom = 683.0
+
+[node name="topbar" type="HBoxContainer" parent="VBoxContainer" unique_id=1155080203]
+z_index = 10
+layout_mode = 2
+
+[node name="timerlabel - Label" type="Label" parent="VBoxContainer/topbar" unique_id=1411965853]
+layout_mode = 2
+
+[node name="scorelabel - Label" type="Label" parent="VBoxContainer/topbar" unique_id=2025409829]
+layout_mode = 2
+
+[node name="EmailCard" type="Panel" parent="VBoxContainer" unique_id=186597991]
+layout_mode = 2
+
+[node name="EmailContent" type="VBoxContainer" parent="VBoxContainer/EmailCard" unique_id=1740715680]
+layout_mode = 0
+offset_left = 103.0
+offset_top = 45.0
+offset_right = 758.0
+offset_bottom = 470.0
+
+[node name="SenderLabel" type="Label" parent="VBoxContainer/EmailCard/EmailContent" unique_id=1258505034]
+layout_mode = 2
+
+[node name="SubjectLabel" type="Label" parent="VBoxContainer/EmailCard/EmailContent" unique_id=1045688048]
+layout_mode = 2
+
+[node name="MessageLabel" type="RichTextLabel" parent="VBoxContainer/EmailCard/EmailContent" unique_id=1707655329]
+layout_mode = 2
+
+[node name="BottonContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1490760034]
+layout_mode = 2
+
+[node name="KeepBotton" type="Button" parent="VBoxContainer/BottonContainer" unique_id=554448823]
+layout_mode = 2
+
+[node name="DeleteBotton" type="Button" parent="VBoxContainer/BottonContainer" unique_id=1981698550]
+layout_mode = 2
+
+[node name="FeedbackLabel" type="Label" parent="." unique_id=410408303]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
