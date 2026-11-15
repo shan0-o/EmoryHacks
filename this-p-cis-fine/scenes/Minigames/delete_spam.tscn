@@ -1,7 +1,11 @@
 [gd_scene format=3 uid="uid://c613eg4u4vx2y"]
 
+[ext_resource type="Script" uid="uid://cclsobkjfx7v8" path="res://scenes/Minigames/delete_spam.gd" id="1_qyhpo"]
 [ext_resource type="Texture2D" uid="uid://d2o1lyvuwq84k" path="res://assets/sprites/backdrop.png" id="1_taf04"]
 [ext_resource type="Texture2D" uid="uid://dxuvdmpy6t0gs" path="res://assets/sprites/PNG/Grey/Default/button_square_header_small_square.png" id="2_3jy0t"]
+[ext_resource type="Texture2D" uid="uid://cv8pj25rgy6nm" path="res://assets/sprites/PNG/Green/Default/bar_round_gloss_large_m.png" id="3_hbdbq"]
+[ext_resource type="FontFile" uid="uid://dfbwjuit7sygb" path="res://assets/fonts/pixel_font.ttf" id="4_rxnr8"]
+[ext_resource type="Texture2D" uid="uid://bkvmrrpjmj7qk" path="res://assets/sprites/PNG/Red/Default/bar_round_gloss_large_m.png" id="5_rxnr8"]
 
 [node name="DeleteSpam" type="Control" unique_id=1150201063]
 layout_mode = 3
@@ -10,6 +14,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_qyhpo")
 
 [node name="Background" type="TextureRect" parent="." unique_id=2117569788]
 propagate_maximum_size = true
@@ -63,6 +68,7 @@ mouse_filter = 2
 
 [node name="WindowArt" type="TextureRect" parent="EmailPanel" unique_id=2144284506]
 texture_filter = 1
+custom_minimum_size = Vector2(1, 1)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -78,6 +84,7 @@ offset_top = 58.5
 offset_right = 258.5
 offset_bottom = 81.5
 theme_override_colors/font_color = Color(0.07058824, 0.07058824, 0.07058824, 1)
+theme_override_fonts/font = ExtResource("4_rxnr8")
 theme_override_font_sizes/font_size = 21
 text = "INBOX — NEW MESSAGE"
 
@@ -88,7 +95,8 @@ offset_top = 159.5
 offset_right = 356.5
 offset_bottom = 200.5
 theme_override_colors/font_color = Color(0.07058824, 0.07058824, 0.07058824, 1)
-theme_override_font_sizes/font_size = 14
+theme_override_fonts/font = ExtResource("4_rxnr8")
+theme_override_font_sizes/font_size = 18
 text = "	From: security@account-alert.example"
 
 [node name="SubjectLabel" type="Label" parent="EmailPanel" unique_id=205037204]
@@ -98,7 +106,8 @@ offset_top = 128.5
 offset_right = 327.5
 offset_bottom = 154.5
 theme_override_colors/font_color = Color(0.07058824, 0.07058824, 0.07058824, 1)
-theme_override_font_sizes/font_size = 20
+theme_override_fonts/font = ExtResource("4_rxnr8")
+theme_override_font_sizes/font_size = 24
 text = "URGENT: Your account is locked!"
 
 [node name="MessageLabel" type="Label" parent="EmailPanel" unique_id=1648147305]
@@ -108,6 +117,86 @@ offset_top = 204.5
 offset_right = 557.5
 offset_bottom = 283.5
 theme_override_colors/font_color = Color(0.07058824, 0.07058824, 0.07058824, 1)
-theme_override_font_sizes/font_size = 18
-text = "Your account has been suspended. 
-Reply with your password immediately to restore access!"
+theme_override_fonts/font = ExtResource("4_rxnr8")
+theme_override_font_sizes/font_size = 20
+text = "Your account has been suspended. Reply with your password immediately to restore access!"
+autowrap_mode = 3
+
+[node name="KeepButton" type="TextureButton" parent="." unique_id=361391702]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -245.0
+offset_top = -239.0
+offset_right = -64.0
+offset_bottom = -179.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("3_hbdbq")
+stretch_mode = 0
+
+[node name="KeepText" type="Label" parent="KeepButton" unique_id=215794214]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 50.0
+offset_top = 4.0
+offset_right = 131.0
+offset_bottom = 53.0
+theme_override_colors/font_color = Color(0.07058824, 0.07058824, 0.07058824, 1)
+theme_override_fonts/font = ExtResource("4_rxnr8")
+theme_override_font_sizes/font_size = 45
+text = "KEEP"
+
+[node name="DeleteButton" type="TextureButton" parent="." unique_id=1577641736]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 66.0
+offset_top = -242.0
+offset_right = 247.0
+offset_bottom = -182.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("5_rxnr8")
+stretch_mode = 0
+
+[node name="DeleteText" type="Label" parent="DeleteButton" unique_id=875782599]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 37.0
+offset_top = 5.0
+offset_right = 150.0
+offset_bottom = 54.0
+theme_override_colors/font_color = Color(0.07058824, 0.07058824, 0.07058824, 1)
+theme_override_fonts/font = ExtResource("4_rxnr8")
+theme_override_font_sizes/font_size = 45
+text = "DELETE"
+
+[node name="FeedbackLabel" type="Label" parent="." unique_id=1243472391]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -297.0
+offset_top = -170.0
+offset_right = 288.0
+offset_bottom = -36.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.07058824, 0.07058824, 0.07058824, 1)
+theme_override_fonts/font = ExtResource("4_rxnr8")
+theme_override_font_sizes/font_size = 25
+text = "Read carefully. Is this email safe?"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="GameTimer" type="Timer" parent="." unique_id=1636878788]
