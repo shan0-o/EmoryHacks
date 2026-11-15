@@ -1,11 +1,24 @@
 [gd_scene format=3 uid="uid://barncn22465ep"]
 
-[ext_resource type="PackedScene" uid="uid://c7qi516l66e7l" path="res://scenes/backdrop.tscn" id="1_uwrxv"]
+[node name="Game" type="Control" unique_id=279095537]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Game" type="Node2D" unique_id=2077566675]
+[node name="DesktopBackground" type="TextureRect" parent="." unique_id=549604276]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1956992393]
-position = Vector2(0, -1)
+[node name="ScreenContainer" type="Control" parent="." unique_id=251485943]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="Node2D" parent="." unique_id=1412888110 instance=ExtResource("1_uwrxv")]
-position = Vector2(0, -2)
+[node name="EffectsOverlay" type="Control" parent="." unique_id=1126965313]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0

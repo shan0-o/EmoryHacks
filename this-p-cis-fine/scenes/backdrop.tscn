@@ -2,7 +2,6 @@
 
 [ext_resource type="Shader" uid="uid://biwltkxuryfsv" path="res://new_shader.gdshader" id="1_7vrkn"]
 [ext_resource type="Texture2D" uid="uid://dalg12dsgrnma" path="res://assets/sprites/backdrop.png" id="2_fu7sn"]
-[ext_resource type="Texture2D" uid="uid://cxrp1xb8mophy" path="res://assets/sprites/profile_pic.svg" id="3_jnrk1"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0pqam"]
 shader = ExtResource("1_7vrkn")
@@ -15,7 +14,3 @@ texture_filter = 1
 material = SubResource("ShaderMaterial_0pqam")
 position = Vector2(0, 1)
 texture = ExtResource("2_fu7sn")
-
-[node name="profile_pic" type="Sprite2D" parent="." unique_id=195806064]
-position = Vector2(-42, -27)
-texture = ExtResource("3_jnrk1")
