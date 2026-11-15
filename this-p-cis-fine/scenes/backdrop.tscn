@@ -1,16 +1,35 @@
 [gd_scene format=3 uid="uid://c7qi516l66e7l"]
 
 [ext_resource type="Shader" uid="uid://biwltkxuryfsv" path="res://new_shader.gdshader" id="1_7vrkn"]
-[ext_resource type="Texture2D" uid="uid://dalg12dsgrnma" path="res://assets/sprites/backdrop.png" id="2_fu7sn"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0pqam"]
 shader = ExtResource("1_7vrkn")
 shader_parameter/pixel_size = 5.0
 
-[node name="Node2D" type="Node2D" unique_id=1412888110]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hwdtg"]
+load_path = "res://.godot/imported/backdrop.png-53283f3284603c37a39fd9a2a542f3ef.ctex"
 
-[node name="GameBackdrop" type="Sprite2D" parent="." unique_id=575351870]
+[node name="DesktopBackground" type="Control" unique_id=1226572497]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameBackdrop" type="TextureRect" parent="." unique_id=206616612]
 texture_filter = 1
 material = SubResource("ShaderMaterial_0pqam")
-position = Vector2(0, 1)
-texture = ExtResource("2_fu7sn")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -256.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CompressedTexture2D_hwdtg")
+expand_mode = 1
+stretch_mode = 6
