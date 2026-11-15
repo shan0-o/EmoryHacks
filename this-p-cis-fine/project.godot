@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="ThisPCisFine"
-run/main_scene="uid://barncn22465ep"
+run/main_scene="uid://dk1p3lmr10r8u"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
