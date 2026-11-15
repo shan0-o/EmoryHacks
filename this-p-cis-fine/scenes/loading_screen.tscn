@@ -1,0 +1,164 @@
+[gd_scene format=3 uid="uid://eyogyhj0u8vv"]
+
+[ext_resource type="Script" uid="uid://cydx3dfui7xo5" path="res://scenes/loading.gd" id="1_ku3bi"]
+[ext_resource type="Texture2D" uid="uid://d2o1lyvuwq84k" path="res://assets/sprites/backdrop.png" id="2_5phy8"]
+[ext_resource type="Texture2D" uid="uid://bljbnu4qsavd2" path="res://assets/sprites/loading_tilesheet.png" id="3_djmwj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qygbf"]
+atlas = ExtResource("3_djmwj")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pu4a1"]
+atlas = ExtResource("3_djmwj")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_if62a"]
+atlas = ExtResource("3_djmwj")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7y4a"]
+atlas = ExtResource("3_djmwj")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gcv3i"]
+atlas = ExtResource("3_djmwj")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_amnj2"]
+atlas = ExtResource("3_djmwj")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v1mdd"]
+atlas = ExtResource("3_djmwj")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5slh2"]
+atlas = ExtResource("3_djmwj")
+region = Rect2(192, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pvqkx"]
+atlas = ExtResource("3_djmwj")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e7oyx"]
+atlas = ExtResource("3_djmwj")
+region = Rect2(64, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bqhjm"]
+atlas = ExtResource("3_djmwj")
+region = Rect2(128, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hdkap"]
+atlas = ExtResource("3_djmwj")
+region = Rect2(192, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eb3t5"]
+atlas = ExtResource("3_djmwj")
+region = Rect2(0, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ummuf"]
+atlas = ExtResource("3_djmwj")
+region = Rect2(64, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i8ls2"]
+atlas = ExtResource("3_djmwj")
+region = Rect2(128, 192, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hprjd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qygbf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pu4a1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_if62a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f7y4a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gcv3i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_amnj2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v1mdd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5slh2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pvqkx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e7oyx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bqhjm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hdkap")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eb3t5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ummuf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i8ls2")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="LoadingScreen" type="Control" unique_id=1551814854]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ku3bi")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1981184595]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_5phy8")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=194054164]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=704228779]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="AnimationHolder" type="Control" parent="CenterContainer/VBoxContainer" unique_id=641156690]
+custom_minimum_size = Vector2(160, 80)
+layout_mode = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CenterContainer/VBoxContainer/AnimationHolder" unique_id=832375689]
+position = Vector2(80, 40)
+rotation = -0.00023939827
+sprite_frames = SubResource("SpriteFrames_hprjd")
+autoplay = "default"
+frame_progress = 0.8328055
+
+[node name="StatusLabel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=832543371]
+layout_mode = 2
+text = "LOADING..."
+horizontal_alignment = 1
